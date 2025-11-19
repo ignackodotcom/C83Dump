@@ -1,6 +1,6 @@
 # C83Dump
 
-## Dump macros library
+## Dump macros library for C and C++
 
 3rd edition of the library
 
