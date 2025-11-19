@@ -12,7 +12,7 @@ support C89 and higher editions<br>
 
 ### Macro to get datatype string
 ```c
-    #define GET_DATATYPE_STRING(var)        ...
+    #define GET_DATATYPE_STRING(var)        ... /* since C11 */
 ```
 
 ### Macros for displaying integer variables
