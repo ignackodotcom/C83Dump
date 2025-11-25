@@ -36,6 +36,11 @@ support C89 and higher editions<br>
     #define DUMP_VARIABLE_ULL_HEX(var)      ... /* since C99 and C++11 */
 ```
 
+### Macro for listing the bits of a variable
+```c
+    #define DUMP_VARIABLE_BITS(type,var)    ...
+```
+
 ### Macros for displaying size_t variables
 ```c
     #define DUMP_VARIABLE_SIZE_T(var)       ...
@@ -77,4 +82,5 @@ support C89 and higher editions<br>
 <br>
 
 # Updates
+2025 11 25 DUMP_VARIABLE_BITS macro added<br>
 <br>

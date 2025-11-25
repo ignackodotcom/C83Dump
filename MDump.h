@@ -19,6 +19,12 @@
 
 
 
+#ifndef __cplusplus
+    #include <limits.h>
+#else
+    #include <climits>
+#endif
+
 /******************************************************************************
 * Dump datatype
 */
@@ -289,6 +295,40 @@
 #define DUMP_VARIABLE_ULL_HEX(var)  printf("%s%s = 0x%llX\n\r", GET_DATATYPE_STRING(var), #var, (var))
 
 #endif /* defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus > 199711L */
+
+
+
+/******************************************************************************
+* \brief
+*	DUMP_VARIABLE_BITS is a macro that outputs the binary representation of a
+*   variable by iterating through its bits and printing '1' or '0' based on
+*   the value of each bit.
+*
+* \param
+*	type - The basic data type.
+* \param
+*	var - The variable to print.
+*
+* \return
+*	Nothing (void).
+*
+* \note
+*
+* \code
+*   ...
+*   DUMP_BITS(unsigned char,value);
+*	...
+* \endcode
+*
+*/
+#define DUMP_VARIABLE_BITS(type,var) \
+    do { \
+        size_t bits; \
+        printf("%s%s = ",  GET_DATATYPE_STRING(var), #var); \
+        bits = sizeof(var) * CHAR_BIT; \
+        while (bits--) putchar((var) & (((type)1) << bits) ? '1' : '0'); \
+        printf("\n\r"); \
+    } while(0)
 
 
 
@@ -774,6 +814,12 @@
                                     } while (0)
 
 #endif /* defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus > 199711L */
+
+
+
+/******************************************************************************
+* Dump variable in bit representation
+*/
 
 
 
