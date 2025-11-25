@@ -21,8 +21,10 @@
 
 #ifndef __cplusplus
     #include <limits.h>
+    #include <stdio.h>
 #else
     #include <climits>
+    #include <cstdio>
 #endif
 
 /******************************************************************************

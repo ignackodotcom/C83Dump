@@ -83,4 +83,5 @@ support C89 and higher editions<br>
 
 # Updates
 2025 11 25 DUMP_VARIABLE_BITS macro added<br>
+2025 11 25 include stdio or cstdio added<br>
 <br>
